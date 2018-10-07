@@ -7,7 +7,8 @@ app.use(express.json());
 const players = [
     { id: 1, name: "Rohit" },
     { id: 2, name: "Kohli" },
-    { id: 3, name: "Rahane" }
+    { id: 3, name: "Rahane" },
+	{ id: 4, name: "Dhoni" }
 ]
 
 app.get('/api/players', (req, res) => {
