@@ -1,1 +1,1 @@
-This reposiroty conatains examples of building Restful api using Node.js. 
+This reposiroty contains examples of building Restful api using Node.js. 
