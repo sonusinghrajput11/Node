@@ -1,0 +1,23 @@
+{
+  "name": "node_mongo_crud",
+  "version": "1.0.0",
+  "description": "It's demo of crud operation using node and mongo",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "nodemon ./src/app.js"
+  },
+  "keywords": [
+    "Node",
+    "Angualr",
+    "Mongo"
+  ],
+  "author": "sonu singh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "joi": "^13.7.0",
+    "mongoose": "^5.3.3",
+    "nodemon": "^1.18.4"
+  }
+}
