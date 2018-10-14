@@ -1,0 +1,68 @@
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Create Product</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form (ngSubmit)="product._id === ''? save() : update()" #productFrom="ngForm">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Product Name" [(ngModel)]="product.name"
+                            name="productName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="price" placeholder="Product Price" [(ngModel)]="product.price"
+                            name="productPrice" required>
+                    </div>
+
+                    <button type="submit" [disabled]="!productFrom.form.valid" class="btn btn-primary">Save</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalPrompt">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Do you want to continue?</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <button type="button" class="btn btn-primary" (click)="delete()">Delete</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myAlertModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Success!</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+
+            <div class="modal-body">
+                <button type="button" class="btn btn-blue-grey create-btn btn-sm" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

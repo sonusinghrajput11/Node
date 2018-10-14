@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="scroll-area">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let product of products'>
+                    <td>{{product._id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>
+                        <span class="fa fa-edit" data-toggle="modal" (click)="selectProduct(product)" data-target="#myModal"></span>
+                    </td>
+                    <td>
+                        <span class="fa fa-trash" data-toggle="modal" (click)="selectProduct(product)" data-target="#myModalPrompt"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button-container">
+        <button type="button" class="btn btn-blue-grey create-btn btn-sm" (click)="createProduct()" data-toggle="modal"
+            data-target="#myModal">Create
+            Product</button>
+    </div>
+
+    <product-form [product]="selectedProduct"></product-form>
+</div>
